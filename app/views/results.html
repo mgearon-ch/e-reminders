@@ -3,25 +3,94 @@
 {% block pageTitle %}
   Get company reminders
 {% endblock %}
-
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Get company reminders
+        Confirm company
       </h1>
-      <p>
-        Sign up to get free reminders by email for a company.
-      </p>
-      <p>An activation email will be sent to the new email address and the recipient must agree to the Terms of Operation to join the service before we can send eReminders to that email address.</p>
-      {{ govukButton({
-        text: "Start now",
-        href: "email-adress",
-        classes: "govuk-button--start"
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "Sarah Philips"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of birth"
+            },
+            value: {
+              text: "5 January 1978"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Contact information"
+            },
+            value: {
+              html: "72 Guild Street<br>London<br>SE23 6FH"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "contact information"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Contact details"
+            },
+            value: {
+              html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "contact details"
+                }
+              ]
+            }
+          }
+        ]
       }) }}
-      <h2 class="govuk-heading-m">No longer want to recieve e-reminders?</h2>
-      <p>Click the unsubscribe link in the email you’ve been sent</p>
+      {{ govukButton({
+  text: "Confirm",
+  href: "email-adress"
+}) }}
     </div>
   </div>
 
