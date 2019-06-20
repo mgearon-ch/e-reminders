@@ -5,14 +5,15 @@
 {% endblock %}
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href: "company-search"
   }) }}
 {% endblock %}
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
         Confirm company
       </h1>
       {{ govukSummaryList({
@@ -23,15 +24,6 @@
             },
             value: {
               text: "Sarah Philips"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "name"
-                }
-              ]
             }
           },
           {
@@ -40,15 +32,6 @@
             },
             value: {
               text: "5 January 1978"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "date of birth"
-                }
-              ]
             }
           },
           {
@@ -57,15 +40,6 @@
             },
             value: {
               html: "72 Guild Street<br>London<br>SE23 6FH"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "contact information"
-                }
-              ]
             }
           },
           {
@@ -74,15 +48,6 @@
             },
             value: {
               html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "contact details"
-                }
-              ]
             }
           }
         ]
