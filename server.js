@@ -205,7 +205,6 @@ if (useCookieSessionStore === 'true') {
     saveUninitialized: false
   })))
 }
-
 // Automatically store all data users enter
 if (useAutoStoreData === 'true') {
   app.use(utils.autoStoreData)

@@ -10,22 +10,28 @@
     <div class="govuk-grid-column-full">
       {{ govukPanel({
         titleText: "You've signed up for eReminders",
-        html: "You'll get an email..."
+        html: "You'll get an email reminding you about your annual accounts"
       }) }}
+
+      {{email}}
+
       <h2 class="govuk-heading-m">What happens next?</h2>
       <p>We've sent you a confirmation email.</p>
+      <p>You'll get an annual reminder a month before your annual accounts is due.</p>
+
       <h2 class="govuk-heading-m">Unsubscribing from eReminders</h2>
       <p>If you want to unsubscribe at any time, click the link in confirmation email or reminder email</p>
       <p>
         <a href="#">What did you think of this service?</a>
         (takes 30 seconds)</a>
-      <p>
-        <a href="#">Sign up for another eReminder</a>
-      </p>
-      <p>
-        <a href="/">Contiune to Companies House</a>
-      </p>
-    </div>
+    </p>
+    <p>
+      <a href="#">Sign up for another eReminder</a>
+    </p>
+    <p>
+      <a href="/">Contiune to Companies House</a>
+    </p>
   </div>
+</div>
 
 {% endblock %}
