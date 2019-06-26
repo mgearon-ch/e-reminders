@@ -13,12 +13,29 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+      {% if errors %}
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+          <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              {% for item in errors %}
+                <li>
+                  <a href="#name">{{item.msg}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endif %}
       <h1 class="govuk-heading-l">
         Select reminders
       </h1>
-      {{ govukRadios({
-        idPrefix: "where-do-you-live",
-        name: "where-do-you-live",
+      <form action="" method="post">
+        {{ govukRadios({
+        idPrefix: "reminder",
+        name: "reminder",
         fieldset: {
           legend: {
             text: "Which reminders?",
@@ -44,10 +61,10 @@
           }
         ]
       }) }}
-      {{ govukButton({
-  text: "Confirm",
-  href: "email-adress"
+        {{ govukButton({
+  text: "Confirm"
 }) }}
+      </form>
     </div>
   </div>
 

@@ -17,6 +17,16 @@ router.post('/company-search', [check('companynumber', 'Enter a valid company nu
     res.redirect('/results')
   }
 })
+
+router.post('/reminders', [check('reminder', 'Select one option').not().isEmpty()], (req, res) => {
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    res.render('reminders', { errors: errors.array() })
+  } else {
+    req.session.reminder = req.body.reminder
+    res.redirect('/email-adress')
+  }
+})
 /*
 Checking the email is valid using .isEmail
 */
@@ -59,10 +69,12 @@ router.get('/finished', function (req, res) {
   } else {
     console.log('No Postmrk API key detected. To test emails run app locally with `heroku local web`')
   }
+
   var email = req.session.email
   var companynumber = req.session.number
+  var reminder = req.session.reminder
   console.log(req.session.email)
-  res.render('finished', { email: email, companynumber: companynumber })
+  res.render('finished', { email: email, companynumber: companynumber, reminder: reminder })
 })
 
 module.exports = router
