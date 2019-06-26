@@ -8,12 +8,11 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+      {% set buttonHref = "You'll get an confirmation email to " + email %}
       {{ govukPanel({
         titleText: "You've signed up for eReminders",
-        html: "You'll get an email reminding you about your annual accounts"
+        html: buttonHref
       }) }}
-
-      {{email}}
 
       <h2 class="govuk-heading-m">What happens next?</h2>
       <p>We've sent you a confirmation email.</p>
@@ -31,6 +30,7 @@
     <p>
       <a href="/">Contiune to Companies House</a>
     </p>
+
   </div>
 </div>
 
