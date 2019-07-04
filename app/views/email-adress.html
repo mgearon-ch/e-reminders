@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-
 {% block pageTitle %}
   Get company reminders
 {% endblock %}
@@ -10,7 +9,6 @@
   }) }}
 {% endblock %}
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% if errors %}
@@ -29,27 +27,25 @@
           </div>
         </div>
       {% endif %}
-
       <h1 class="govuk-heading-l">What is your email address?</h1>
       <form action="" method="post">
         {{ govukInput({
-        label: {
-          text: "Email address",
-          isPageHeading: true,
-           classes: ""
-        },
-        id: "email",
-        hint: {
-          text: "Your reminder will be sent here"
-        },
-        name: "email",
-        classes: "govuk-input--width-20"
+          label: {
+            text: "Email address",
+            isPageHeading: true,
+             classes: ""
+            },
+          id: "email",
+          hint: {
+            text: "Your reminder will be sent here"
+          },
+          name: "email",
+          classes: "govuk-input--width-20"
         }) }}
         {{ govukButton({
-         text: "Continue"
+           text: "Continue"
          }) }}
       </form>
-
     </div>
   </div>
 

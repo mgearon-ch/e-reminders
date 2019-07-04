@@ -14,40 +14,48 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-l">
-        Confirm company
+        Confirm company details
       </h1>
       {{ govukSummaryList({
         rows: [
           {
             key: {
-              text: "Name"
+              text: "Company name"
             },
             value: {
-              text: "Sarah Philips"
+              text: "	MANY HAPPY RETURNS TRAVEL C.I.C."
             }
           },
           {
             key: {
-              text: "Date of birth"
+              text: "Company number"
             },
             value: {
-              text: "5 January 1978"
+              text: "03886612"
             }
           },
           {
             key: {
-              text: "Contact information"
+              text: "Registered office address"
             },
             value: {
-              html: "72 Guild Street<br>London<br>SE23 6FH"
+              html: "209 Liverpool Road,<br /> PR8 4PH"
             }
           },
           {
             key: {
-              text: "Contact details"
+              text: "Next accounts made up to"
             },
             value: {
-              html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+              text: '31 March 2015 due by 31 December 2015'
+            }
+          },
+          {
+            key: {
+              text: "Last accounts made up to"
+            },
+            value: {
+              text: '31 March 2014'
             }
           }
         ]
