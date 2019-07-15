@@ -1,11 +1,8 @@
 {% extends "layout.html" %}
-
 {% block pageTitle %}
   Get company eReminders
 {% endblock %}
-
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% set buttonHref = "You'll get an confirmation email to " + email %}
@@ -13,13 +10,11 @@
         titleText: "You've signed up for eReminders",
         html: buttonHref
       }) }}
-
       <h2 class="govuk-heading-m">What happens next?</h2>
       <p>We've sent you a confirmation email.</p>
       <p>You'll get an
         {{reminder}}
         a month before your annual accounts is due.</p>
-
       <h2 class="govuk-heading-m">Unsubscribing from eReminders</h2>
       <p>If you want to unsubscribe at any time, click the link in confirmation email or reminder email</p>
       <p>
@@ -32,8 +27,6 @@
     <p>
       <a href="/">Contiune to Companies House</a>
     </p>
-
   </div>
 </div>
-
 {% endblock %}
