@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-
 {% block pageTitle %}
   Get company reminders
 {% endblock %}
@@ -10,7 +9,6 @@
   }) }}
 {% endblock %}
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {% if errors %}
@@ -62,10 +60,9 @@
         ]
       }) }}
         {{ govukButton({
-  text: "Confirm"
-}) }}
+        text: "Confirm"
+      }) }}
       </form>
     </div>
   </div>
-
 {% endblock %}
